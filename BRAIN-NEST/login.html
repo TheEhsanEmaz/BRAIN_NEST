@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Course Registration Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>BRAIN<span>NEST</span></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-wrapper">
+      <div class="login-card">
+        <div class="login-logo">🎓</div>
+        <h2>Welcome back</h2>
+        <p class="login-sub">Sign in to your student account to continue.</p>
+
+        <div id="loginError"></div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" placeholder="e.g. CSE2024001" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="login-btn">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Course Registration Portal — Computer Science Department</p>
+  </footer>
+
+  <script src="js/login.js"></script>
+  <script src="js/ui-polish.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>BRAIN<span>NEST</span></h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding:0; max-width:100%; overflow:hidden;">
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hp-hero">
+      <div class="hp-hero-bg">
+        <div class="hp-orb hp-orb1"></div>
+        <div class="hp-orb hp-orb2"></div>
+        <div class="hp-orb hp-orb3"></div>
+        <div class="hp-grid"></div>
+      </div>
+
+      <div class="hp-hero-inner">
+        <div class="hp-hero-text">
+          <div class="hp-badge">
+            <span class="hp-badge-dot"></span>
+            Computer Science Department · Spring 2026
+          </div>
+          <h1 class="hp-title">
+            Register for courses<br>
+            <span class="hp-title-grad">without the chaos</span>
+          </h1>
+          <p class="hp-subtitle">
+            The Course Registration Portal replaces long queues and paper forms with a fast, modern system. Browse courses, reserve your seat, and manage your entire semester schedule from one dashboard.
+          </p>
+          <div class="hp-hero-actions">
+            <a href="login.html" class="hp-btn-primary">
+              Get started free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="courses.html" class="hp-btn-ghost">View course catalog</a>
+          </div>
+          <div class="hp-trust">
+            <div class="hp-trust-avatars">
+              <span class="hp-av" style="background:#6c63ff">A</span>
+              <span class="hp-av" style="background:#22d3a0">B</span>
+              <span class="hp-av" style="background:#a78bfa">C</span>
+              <span class="hp-av" style="background:#ff5f7e">D</span>
+            </div>
+            <p><strong>200+ students</strong> registered this semester</p>
+          </div>
+        </div>
+
+        <div class="hp-hero-right">
+          <div class="hp-terminal">
+            <div class="hp-terminal-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="hp-terminal-title">register.js — Course Portal</span>
+            </div>
+            <div class="hp-terminal-body">
+              <div class="hp-line"><span class="t-dim">// Spring 2026 registration</span></div>
+              <div class="hp-line"><span class="t-purple">const</span> <span class="t-white">student</span> = <span class="t-green">"you"</span>;</div>
+              <div class="hp-line">&nbsp;</div>
+              <div class="hp-line"><span class="t-purple">async function</span> <span class="t-blue">enroll</span>(courseId) {</div>
+              <div class="hp-line">&nbsp;&nbsp;<span class="t-purple">const</span> course = <span class="t-blue">await</span> catalog.find(courseId);</div>
+              <div class="hp-line">&nbsp;&nbsp;<span class="t-purple">if</span> (course.seats > <span class="t-orange">0</span>) {</div>
+              <div class="hp-line">&nbsp;&nbsp;&nbsp;&nbsp;dashboard.add(course);</div>
+              <div class="hp-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-purple">return</span> <span class="t-green">"Enrolled ✓"</span>;</div>
+              <div class="hp-line">&nbsp;&nbsp;}</div>
+              <div class="hp-line">}</div>
+              <div class="hp-line hp-typed-line"><span class="t-dim">❯ </span><span id="typedOutput" class="t-green"></span><span class="cursor"></span></div>
+            </div>
+          </div>
+
+          <div class="hp-float-cards">
+            <div class="hp-float-card hp-fc1">
+              <div class="hp-fc-icon">✓</div>
+              <div>
+                <div class="hp-fc-title">CSE101 Registered</div>
+                <div class="hp-fc-sub">Introduction to Programming</div>
+              </div>
+            </div>
+            <div class="hp-float-card hp-fc2">
+              <div class="hp-fc-icon" style="color:#a78bfa">📊</div>
+              <div>
+                <div class="hp-fc-title">12 / 18 Credits</div>
+                <div class="hp-fc-sub">Semester progress</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STATS BAR
+    ═══════════════════════════════════════ -->
+    <section class="hp-stats">
+      <div class="hp-stats-inner">
+        <div class="hp-stat">
+          <span class="hp-stat-num" data-target="6">0</span>
+          <span class="hp-stat-label">Courses offered</span>
+        </div>
+        <div class="hp-stat-div"></div>
+        <div class="hp-stat">
+          <span class="hp-stat-num" data-target="5">0</span>
+          <span class="hp-stat-label">Departments</span>
+        </div>
+        <div class="hp-stat-div"></div>
+        <div class="hp-stat">
+          <span class="hp-stat-num" data-target="200">0</span>
+          <span class="hp-stat-label">Students enrolled</span>
+        </div>
+        <div class="hp-stat-div"></div>
+        <div class="hp-stat">
+          <span class="hp-stat-num" data-suffix="s" data-target="30">0</span>
+          <span class="hp-stat-label">Avg. registration time</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         HOW IT WORKS
+    ═══════════════════════════════════════ -->
+    <section class="hp-section">
+      <div class="hp-section-inner">
+        <div class="hp-section-head">
+          <div class="hp-label">How it works</div>
+          <h2>Go from login to enrolled<br>in under two minutes</h2>
+          <p>No queuing at the registrar's office. No paper forms. Just a simple three-step process.</p>
+        </div>
+
+        <div class="hp-steps">
+          <div class="hp-step">
+            <div class="hp-step-num">01</div>
+            <div class="hp-step-content">
+              <div class="hp-step-icon">🔐</div>
+              <h3>Log in with your student ID</h3>
+              <p>Enter your student ID and password to access the portal. Your session is saved so you can pick up where you left off.</p>
+              <ul class="hp-step-list">
+                <li>No paperwork required</li>
+                <li>Instant access after login</li>
+                <li>Logout anytime from any device</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hp-step-connector"></div>
+          <div class="hp-step">
+            <div class="hp-step-num">02</div>
+            <div class="hp-step-content">
+              <div class="hp-step-icon">📚</div>
+              <h3>Browse the course catalog</h3>
+              <p>See every course offered this semester with full details — instructor, schedule, credit hours, and available seats.</p>
+              <ul class="hp-step-list">
+                <li>Real-time search and filter</li>
+                <li>Full course details on every card</li>
+                <li>Registered courses highlighted instantly</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hp-step-connector"></div>
+          <div class="hp-step">
+            <div class="hp-step-num">03</div>
+            <div class="hp-step-content">
+              <div class="hp-step-icon">✅</div>
+              <h3>Register and manage your schedule</h3>
+              <p>Click Register to confirm your spot instantly. Your personal dashboard tracks every course and your total credit load.</p>
+              <ul class="hp-step-list">
+                <li>One-click registration</li>
+                <li>Drop courses anytime</li>
+                <li>Live credit-hour counter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         COURSE PREVIEW
+    ═══════════════════════════════════════ -->
+    <section class="hp-section hp-section-dark">
+      <div class="hp-section-inner">
+        <div class="hp-section-head">
+          <div class="hp-label">Course catalog preview</div>
+          <h2>See what is on offer<br>this semester</h2>
+          <p>A sample of the courses available. Log in to see the full list and register.</p>
+        </div>
+
+        <div class="hp-preview-grid">
+          <div class="hp-preview-card">
+            <div class="hp-pc-top">
+              <span class="hp-pc-code">CSE101</span>
+              <span class="hp-pc-credits">3 credits</span>
+            </div>
+            <h3>Introduction to Programming</h3>
+            <div class="hp-pc-meta">
+              <span>👤 Dr. A. Rahman</span>
+              <span>🕐 Mon/Wed 9:00 – 10:30 AM</span>
+            </div>
+            <a href="login.html" class="hp-pc-btn">Register →</a>
+          </div>
+          <div class="hp-preview-card hp-preview-card-featured">
+            <div class="hp-pc-featured-label">Most popular</div>
+            <div class="hp-pc-top">
+              <span class="hp-pc-code">CSE205</span>
+              <span class="hp-pc-credits">3 credits</span>
+            </div>
+            <h3>Web Development Fundamentals</h3>
+            <div class="hp-pc-meta">
+              <span>👤 Ms. S. Karim</span>
+              <span>🕐 Tue/Thu 11:00 – 12:30 PM</span>
+            </div>
+            <a href="login.html" class="hp-pc-btn">Register →</a>
+          </div>
+          <div class="hp-preview-card">
+            <div class="hp-pc-top">
+              <span class="hp-pc-code">CSE210</span>
+              <span class="hp-pc-credits">4 credits</span>
+            </div>
+            <h3>Database Systems</h3>
+            <div class="hp-pc-meta">
+              <span>👤 Dr. M. Hossain</span>
+              <span>🕐 Mon/Wed 1:00 – 2:30 PM</span>
+            </div>
+            <a href="login.html" class="hp-pc-btn">Register →</a>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="courses.html" class="hp-btn-ghost">View all 6 courses →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FEATURES
+    ═══════════════════════════════════════ -->
+    <section class="hp-section">
+      <div class="hp-section-inner">
+        <div class="hp-section-head">
+          <div class="hp-label">Features</div>
+          <h2>Built for students,<br>designed to be fast</h2>
+        </div>
+
+        <div class="hp-features">
+          <div class="hp-feature-big">
+            <div class="hp-fb-icon">⚡</div>
+            <h3>Instant registration</h3>
+            <p>One click confirms your spot. The system validates in real time — no page reloads, no waiting. Duplicate registrations are caught automatically before you even submit.</p>
+            <div class="hp-fb-tag">Zero page reloads</div>
+          </div>
+          <div class="hp-feature-stack">
+            <div class="hp-fs-item">
+              <div class="hp-fs-icon">🔍</div>
+              <div>
+                <h4>Live search</h4>
+                <p>Filter courses by name or code as you type. Results update instantly.</p>
+              </div>
+            </div>
+            <div class="hp-fs-item">
+              <div class="hp-fs-icon">📊</div>
+              <div>
+                <h4>Credit tracker</h4>
+                <p>Your dashboard shows a running total of credit hours as you add and drop courses.</p>
+              </div>
+            </div>
+            <div class="hp-fs-item">
+              <div class="hp-fs-icon">🗑️</div>
+              <div>
+                <h4>Drop anytime</h4>
+                <p>Remove a course from your schedule with one click — changes take effect immediately.</p>
+              </div>
+            </div>
+            <div class="hp-fs-item">
+              <div class="hp-fs-icon">📱</div>
+              <div>
+                <h4>Fully responsive</h4>
+                <p>Works perfectly on phones, tablets, and laptops — no separate mobile app needed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         DASHBOARD PREVIEW
+    ═══════════════════════════════════════ -->
+    <section class="hp-section hp-section-dark">
+      <div class="hp-section-inner hp-dash-preview-wrap">
+        <div class="hp-dash-text">
+          <div class="hp-label">Dashboard</div>
+          <h2>Your whole semester, at a glance</h2>
+          <p>The personal dashboard shows every course you are enrolled in, your total credit load, and lets you drop courses with one click — no digging through menus.</p>
+          <ul class="hp-dash-list">
+            <li>
+              <span class="hp-dl-icon">✓</span>
+              <span>Live credit-hour counter updates as you register or drop</span>
+            </li>
+            <li>
+              <span class="hp-dl-icon">✓</span>
+              <span>Every registered course shows instructor and schedule</span>
+            </li>
+            <li>
+              <span class="hp-dl-icon">✓</span>
+              <span>Drop any course with one click and instant confirmation</span>
+            </li>
+            <li>
+              <span class="hp-dl-icon">✓</span>
+              <span>Sidebar panel shows semester summary at a glance</span>
+            </li>
+          </ul>
+          <a href="dashboard.html" class="hp-btn-primary" style="margin-top:1.5rem; display:inline-flex;">
+            Go to dashboard
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hp-dash-mockup">
+          <div class="hp-dm-bar">
+            <span class="hp-dm-title">📊 My Dashboard</span>
+            <span class="hp-dm-badge">Spring 2026</span>
+          </div>
+          <div class="hp-dm-stats">
+            <div class="hp-dm-stat"><div class="hp-dm-sval" style="color:#a78bfa">3</div><div class="hp-dm-slabel">Courses</div></div>
+            <div class="hp-dm-stat"><div class="hp-dm-sval" style="color:#22d3a0">10</div><div class="hp-dm-slabel">Credits</div></div>
+            <div class="hp-dm-stat"><div class="hp-dm-sval">8</div><div class="hp-dm-slabel">Remaining</div></div>
+          </div>
+          <div class="hp-dm-courses">
+            <div class="hp-dm-course">
+              <div class="hp-dm-code">CSE</div>
+              <div class="hp-dm-cinfo">
+                <div class="hp-dm-cname">Introduction to Programming</div>
+                <div class="hp-dm-cmeta">Dr. A. Rahman · 3 cr</div>
+              </div>
+              <div class="hp-dm-drop">Drop</div>
+            </div>
+            <div class="hp-dm-course">
+              <div class="hp-dm-code" style="color:#22d3a0;border-color:rgba(34,211,160,0.2);background:rgba(34,211,160,0.08)">MAT</div>
+              <div class="hp-dm-cinfo">
+                <div class="hp-dm-cname">Discrete Mathematics</div>
+                <div class="hp-dm-cmeta">Dr. F. Akter · 3 cr</div>
+              </div>
+              <div class="hp-dm-drop">Drop</div>
+            </div>
+            <div class="hp-dm-course">
+              <div class="hp-dm-code" style="color:#ff5f7e;border-color:rgba(255,95,126,0.2);background:rgba(255,95,126,0.08)">ENG</div>
+              <div class="hp-dm-cinfo">
+                <div class="hp-dm-cname">Technical Writing</div>
+                <div class="hp-dm-cmeta">Ms. R. Islam · 2 cr</div>
+              </div>
+              <div class="hp-dm-drop">Drop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════ -->
+    <section class="hp-section">
+      <div class="hp-section-inner">
+        <div class="hp-section-head">
+          <div class="hp-label">FAQ</div>
+          <h2>Common questions</h2>
+        </div>
+        <div class="hp-faq">
+          <div class="hp-faq-item">
+            <div class="hp-faq-q">Do I need to create an account?</div>
+            <div class="hp-faq-a">No — just enter your existing student ID and password. Your account is set up by the department automatically when you enroll in the university.</div>
+          </div>
+          <div class="hp-faq-item">
+            <div class="hp-faq-q">Can I register from my phone?</div>
+            <div class="hp-faq-a">Yes. The portal is fully responsive and works on any modern browser on phones, tablets, and computers.</div>
+          </div>
+          <div class="hp-faq-item">
+            <div class="hp-faq-q">What happens if I register for a course by mistake?</div>
+            <div class="hp-faq-a">You can drop any course from your dashboard at any time during the registration window. Just click Drop next to the course and confirm.</div>
+          </div>
+          <div class="hp-faq-item">
+            <div class="hp-faq-q">How many courses can I register for?</div>
+            <div class="hp-faq-a">The maximum is 18 credit hours per semester. Your dashboard shows how many credits you have left to use so you never go over the limit.</div>
+          </div>
+          <div class="hp-faq-item">
+            <div class="hp-faq-q">Is my registration saved if I close the browser?</div>
+            <div class="hp-faq-a">Yes. Registrations are saved locally in your browser so your enrolled courses persist between sessions on the same device.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════ -->
+    <section class="hp-cta">
+      <div class="hp-cta-bg">
+        <div class="hp-orb hp-orb1" style="width:600px;height:600px;top:-200px;left:-100px;"></div>
+        <div class="hp-orb hp-orb2" style="width:500px;height:500px;bottom:-200px;right:-100px;"></div>
+      </div>
+      <div class="hp-cta-inner">
+        <div class="hp-badge" style="margin-bottom:1.5rem;">Spring 2026 registration is open</div>
+        <h2 class="hp-cta-title">Ready to build<br>your semester?</h2>
+        <p class="hp-cta-sub">Join hundreds of students who have already registered. It takes less than two minutes.</p>
+        <div class="hp-hero-actions" style="justify-content:center;">
+          <a href="login.html" class="hp-btn-primary">
+            Start registering
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="courses.html" class="hp-btn-ghost">Browse courses first</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.07); padding:2rem; text-align:center; color:#5a5a72; font-size:0.82rem;">
+    <p>&copy; 2026 Course Registration Portal — Computer Science Department</p>
+  </footer>
+
+  <script src="js/ui-polish.js"></script>
+  <script src="js/home-animation.js"></script>
+  <script>
+    // Counter animation
+    const counters = document.querySelectorAll(".hp-stat-num");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = +el.dataset.target;
+          const suffix = el.dataset.suffix || "";
+          let current = 0;
+          const step = Math.ceil(target / 40);
+          const timer = setInterval(() => {
+            current = Math.min(current + step, target);
+            el.textContent = current + suffix;
+            if (current >= target) clearInterval(timer);
+          }, 35);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+    // FAQ accordion
+    document.querySelectorAll(".hp-faq-item").forEach(item => {
+      item.querySelector(".hp-faq-q").addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+        document.querySelectorAll(".hp-faq-item").forEach(i => i.classList.remove("open"));
+        if (!isOpen) item.classList.add("open");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — Course Registration Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>BRAIN<span>NEST</span></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="label">Semester Catalog</div>
+      <h2>Available Courses</h2>
+      <p>Browse and register for courses offered this term. Click register to reserve your seat instantly.</p>
+    </div>
+
+    <div class="courses-toolbar">
+      <div class="search-wrap">
+        <input type="text" id="courseSearch" placeholder="Search by name or course code...">
+      </div>
+    </div>
+
+    <div id="courseList"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Course Registration Portal — Computer Science Department</p>
+  </footer>
+
+  <script src="js/courses-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/ui-polish.js"></script>
+</body>
+</html>

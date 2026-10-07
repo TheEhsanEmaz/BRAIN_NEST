@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Course Registration Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>BRAIN<span>NEST</span></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="label">My Schedule</div>
+      <h2>Your Dashboard</h2>
+      <p>All your registered courses for this semester in one place.</p>
+    </div>
+
+    <div id="summaryBar" class="summary-bar"></div>
+
+    <div class="dashboard-grid">
+      <div>
+        <div id="registeredList"></div>
+      </div>
+      <div class="sidebar-panel">
+        <h3>Semester summary</h3>
+        <div id="sidebarStats"></div>
+        <a href="courses.html" class="btn btn-outline" style="width:100%; justify-content:center; margin-top:1.2rem;">
+          Add more courses
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Course Registration Portal — Computer Science Department</p>
+  </footer>
+
+  <script src="js/courses-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/ui-polish.js"></script>
+</body>
+</html>
